@@ -349,3 +349,38 @@ body{
   }
   
 
+  @media (max-width: 768px) {
+    body {
+      overflow-x: hidden;
+    }
+  
+    /* المينيو */
+    aside, .sidebar {
+      width: 100%;
+      position: relative;
+    }
+  
+    aside ul, .sidebar ul {
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  
+    aside li, .sidebar li {
+      margin-right: 15px;
+    }
+  
+    /* المحتوى */
+    main, .content {
+      width: 100%;
+      margin: 0;
+      padding: 15px;
+    }
+  
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  
