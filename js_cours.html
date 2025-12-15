@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Cours</title>
+    <link rel="stylesheet" href="assets/css/style-4.css">
+    <link rel="icon" href="assets/img/JAVA_SCRIPT.png">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="assets/img/sti.png" alt="STI_Photo">
+            <h4>développement web</h4>
+
+        </div>
+        <ul class="nav-items">
+            <li class="nav-item"><a href="accueil.html" class="nav-link">Accueil</a></li>
+            <li><div id="contact"><input type="text" placeholder="écrire ton message" id="contact-1"><button onclick="envoyer()">Envoyer</button></div></li>
+            <li class="nav-item"><a class="nav-link" onclick="contact()">Contact</a></li>
+            <li><img src="assets/img/cours.png" alt="Cours_Logo" width="65" height="60"></li> 
+        </ul>
+    </nav>
+    <div class="nav_cours">
+        <h1>Les element de cours</h1>
+        <ul>
+            <li onclick="scrol('#a')"> Opérateurs logiques</li>
+            <li onclick="scrol('#b')">Opérateurs de comparaison</li>
+            <li onclick="scrol('#c')">Opérateurs arithmétiques</li>
+            <li onclick="scrol('#d')">Méthodes pour afficher une sortie* <i class="fa-solid fa-trophy-star"></i></li>
+            <li onclick="scrol('#e')">Méthode pour saisir une entrée</li>
+            <li onclick="scrol('#f')">Fonctions JS</li>
+            <li onclick="scrol('#g')">Méthodes de l'objet Math (Math.)</li>
+            <li onclick="scrol('#k')">Les chaînes de caractères</li>
+            <li onclick="document.location.href='#m'">L'objet Date</li>        
+        </ul>
+    </div>
+
+     <article >
+		<div>
+		<p class="h1"><img src="assets/img/JAVA_SCRIPT.png" style="width:6%; height: 6%;" alt="JS_Logo">JavaScript</p>
+			<h3 style="font-size: 2.2rem; font-weight: bold;color: #0e2d4e; margin-bottom: 1.3%;">Introudction : </h3>
+			<p style="font-family:sans-serif; font-size: 1.15rem;">Qu'est-ce que JavaScript ?
+                JavaScript est un langage de programmation utilisé par les développeurs pour concevoir des sites web interactifs. Les fonctions JavaScript peuvent permettre d'améliorer l'expérience utilisateur d'un site web, de la mise à jour des flux de médias sociaux à l'affichage d'animations et de cartes interactives. En tant que langage de script côté client, c'est l'une des principales technologies du web. Lors de la navigation sur Internet, à tout moment vous pouvez par exemple voir un carrousel d'images, un menu déroulant « Cliquer pour afficher » ou le changement dynamique de la couleur des éléments d'une page web. Tout cela est possible grâce à JavaScript.
+            </p>
+
+		<video controls src="assets/video/Javascript.mp4" class="e" style="width: 55%;height: 45%;margin-top: 2% ; margin-left: 23%;"></video>
+        </div>
+
+        <h2 id="a" class="a">Opérateurs logiques: <button class="btn" id="f1" onclick="exmple('code-runner_1','f1')" style="background-color:#f7df1e" >Exemples ↓</button></h2>
+            <p class="dd"><span class="a_1"> && :</span> ET</p>
+            <p class="dd"><span class="a_1">||</span> OU</p>
+            <p class="dd"><span class="a_1">!</span> NON</p>
+        <div id="code-runner_1" class="code-runner">
+            <textarea class="code-input js_code" id="input-1">
+                <!DOCTYPE html>
+                <html>
+                <body>
+
+
+                <h2>Les Opérateurs </h2>
+
+                <p>Affectez 5 à x, et affichez la valeur de la comparaison (x == 8) :</p>
+
+                <p id="kemo"></p>
+                
+
+
+                &lt;script>
+                let x = 5;
+                document.getElementById("kemo").innerHTML = (x == 8);
+                
+                </script>
+
+                </body>
+                </html>
+
+
+
+             
+
+            </textarea>
+            <button onclick="runCode('input-1','out_1')" style="background-color:#0e2d4e">exécuter le code</button>
+            <iframe style="border: 2px solid #f7df1e;" class='output' id='out_1' src="iframe.html:blank"></iframe>
+        </div>
+        <h2 id="b" class="a">Opérateurs de comparaison: <button class="btn" id="f2" onclick="exmple('code-runner_2','f2')" style="background-color:#f7df1e">Exemples ↓</button></h2>
+            <p class="dd"><span class="a_1"> == :</span> égal à</p>
+            <p class="dd"><span class="a_1">!= :</span> différent de</p>
+            <p class="dd"><span class="a_1">> :</span>supérieur à</p>
+            <p class="dd"><span class="a_1">>= : </span> supérieur ou égal à</p>
+            <p class="dd"><span class="a_1">&lt; :  </span>inférieur à</p>
+            <p class="dd"><span class="a_1">&lt;= : </span> inférieur ou égale à</p>
+        <div id="code-runner_2" class="code-runner">
+            <textarea class="code-input js_code" id="input-2">
+                <!DOCTYPE html>
+                <html>
+                <body>
+
+
+
+                <p>Affectez 5 à x, et affichez la valeur de la comparaison (x == 5) :</p>
+
+                <p id="demo"></p>
+
+                &lt;script>
+                let x = 5;
+                document.getElementById("demo").innerHTML = (x == 5);
+                </script>
+
+                </body>
+                </html>
+           
+            </textarea>
+            <button onclick="runCode('input-2','out_2')" style="background-color:#0e2d4e">exécuter le code</button>
+            <iframe style="border: 2px solid #f7df1e;" class='output' id='out_2' src="iframe.html:blank"></iframe>
+        </div>
+        <h2 class="a" id="c">Opérateurs arithmétiques: <button class="btn" id="f3" onclick="exmple('code-runner_3','f3')" style="background-color:#f7df1e">Exemples ↓</button></h2>
+            <p class="dd"><span class="a_1">+ : </span>addition</p>
+            <p class="dd"><span class="a_1">- :</span> soustraction</p>
+            <p class="dd"><span class="a_1">* :</span> multiplication</p>
+            <p class="dd"><span class="a_1">/ : </span> division</p>
+            <p class="dd"><span class="a_1">% :</span> modulo</p>
+        <div id="code-runner_3" class="code-runner">
+                        <textarea class="code-input js_code" id="input-3"> 
+                                    <!DOCTYPE html>
+                            <html>
+                            <body>
+
+                            <h2>la somme est:</h2>
+                            
+
+                            <p id="demo"></p>
+
+                            <script>
+                            let x = 100 + 50;
+                            document.getElementById("demo").innerHTML = x;
+                            </script>
+
+                            </body>
+                            </html>
+                        </textarea>
+            <button onclick="runCode('input-3','out_3')" style="background-color:#0e2d4e">exécuter le code</button>
+            <iframe style="border: 2px solid #f7df1e;" class='output' id='out_3' src="iframe.html:blank"></iframe>
+        </div>
+        <h2 class="a" id="d">Méthodes pour afficher une sortie*<button class="btn" id="f4" onclick="exmple('code-runner_4','f4')" style="background-color:#f7df1e">Exemples ↓</button></h2>
+            <p class="dd"><span class="a_1"> alert() :</span>Affiche un message dans une boîte de dialogue.</p>
+            <p class="dd"><span class="a_1">document.write() :</span> Affiche directement dans le document HTML</p>
+            <p class="dd"><span class="a_1">innerHTML :</span>Affiche un contenu dynamiquement dans un elément HTML</p>
+        <div id="code-runner_4" class="code-runner">
+            <textarea class="code-input js_code" id="input-4">
+            <pre>
+                <code>
+                                       <!DOCTYPE html>
+<html>
+<body>
+
+
+<p>Cliquez sur le bouton pour afficher une boîte d'alerte.</p>
+
+<button onclick="myFunction()">Try it</button>
+<button type="button" onclick="myFunction()">Click me!</button>
+<p id="demo" onclick="myFunction()">Cliquez sur moi pour modifier mon contenu HTML (innerHTML).</p>
+
+<script>
+function myFunction() {
+  alert("Bonjour! Je suis une boite d'alerte !");
+}
+function myFunction() {
+  document.write("Bonjour! monde");
+}
+function myFunction() {
+  document.getElementById("demo").innerHTML = "j ai changer";
+}
+</script>
+
+</body>
+</html>
+
+                 </pre>
+             </code>  
+                </code>
+            </pre>               
+            </textarea>
+            <button onclick="runCode('input-4','out_4')" style="background-color:#0e2d4e">exécuter le code</button>
+            <iframe style="border: 2px solid #f7df1e;" class='output' id='out_4' src="iframe.html:blank"></iframe>
+        </div>
+        <h2 class="a" id="e">Méthode pour saisir une entrée  <button class="btn" id="f5" onclick="exmple('code-runner_5','f5')" style="background-color:#f7df1e">Exemples ↓</button></h2>
+            <p class="dd"><span class="a_1"> prompt() :</span>Affiche une boite de dialogue avec une zone de saisie.</p>
+        <div id="code-runner_5" class="code-runner">
+            <textarea class="code-input js_code" id="input-5">
+            <pre>
+                <code>
+                    <!DOCTYPE html>
+<html>
+<body>
+
+
+<p>Cliquez sur le bouton pour afficher la boîte d'invite.</p>
+
+<button onclick="myFunction()">Essayez-le</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let person = prompt(" enter votre nom");
+  if (person != null) {
+    document.getElementById("demo").innerHTML =
+    "Hello " + person + "! How are you today?";
+  }
+}
+</script>
+
+</body>
+</html>
+                </code>
+            </pre>               
+            </textarea>
+            <button onclick="runCode('input-5','out_5')" style="background-color:#0e2d4e">exécuter le code</button>
+            <iframe style="border: 2px solid #f7df1e;" class='output' id='out_5' src="iframe.html:blank"></iframe>
+        </div>
+        <h2 class="a" id="f">Fonctions JS : <button class="btn" id="f6" onclick="exmple('code-runner_6','f6')" style="background-color:#f7df1e">Exemples ↓</button></h2>
+            <p class="dd"><span class="a_1"> isNaN(a) :</span> Retourne vrai si l'argument a n'est pas un nombre, sinon elle retourne faux.</p>
+            <p class="dd"><span class="a_1"> Number(ch) : </span>Convertit une chaine ch en un nombre.</p>
+            <p class="dd"><span class="a_1">parseFloat(ch) :</span>Convertit une chaîne ch en réel.*</p>
+            <p class="dd"><span class="a_1">parseInt(ch,b) :</span>Convertit une chaine ch en entier exprimé dans la base b.</p>
+            <p class="dd"><span class="a_1">String(a) :</span>Convertit la valeur a en chaine.</p>
+
+
+        <div id="code-runner_6" class="code-runner">
+            <textarea class="code-input js_code" id="input-6">
+            <!DOCTYPE html>
+<html>
+<body>
+
+
+<h2>isNaN() Method</h2>
+
+<p>isNaN() renvoie vrai si une valeur est NaN :</p>
+
+<p id="demo"></p>
+<p id="bemo"></p>
+<p id="femo"></p>
+
+&lt;script>
+let result =
+"Is 123 NaN? " + isNaN(123) + "<br>" +
+"Is -1.23 NaN? " + isNaN(-1.23) + "<br>" +
+"Is 5-2 NaN? " + isNaN(5-2) + "<br>" +
+"Is 0 NaN? " + isNaN(0);
+document.getElementById("demo").innerHTML = result;
+document.getElementById("bemo").innerHTML = 
+  Number(true) + "<br>" +
+  Number(false) + "<br>" +
+  Number("10") + "<br>" + 
+  Number("  10") + "<br>" +
+  Number("10  ") + "<br>" +
+  Number(" 10  ") + "<br>" +
+  Number("10.33") + "<br>" + 
+  Number("10,33") + "<br>" +
+  Number("10 33") + "<br>" +
+  Number("John");
+  document.getElementById("femo").innerHTML =
+parseFloat(10) + "<br>" +
+parseFloat("10") + "<br>" +
+parseFloat("10.33") + "<br>" +
+parseFloat("34 45 66") + "<br>" +
+parseFloat("He was 40");
+</script>
+
+</body>
+</html>               
+            </textarea>
+            <button onclick="runCode('input-6','out_6')" style="background-color:#0e2d4e">exécuter le code</button>
+            <iframe style="border: 2px solid #f7df1e;" class='output' id='out_6' src="iframe.html:blank"></iframe>
+        </div>
+        <h2 class="a" id="g">Méthodes de l'objet Math (Math.): <button class="btn" id="f7" onclick="exmple('code-runner_7','f7')" style="background-color:#f7df1e">Exemples ↓</button></h2>
+            <p class="dd"><span class="a_1"> abs() :</span> Retourne la valeur absolue.</p>
+            <p class="dd"><span class="a_1">sqrt() :</span>  Retourne la racine carré.</p>
+            <p class="dd"><span class="a_1">round() : </span> Retourne l'entier le plus proche.</p>
+            <p class="dd"><span class="a_1">trunc() :</span> Retourne la troncature entiére d'un nombre en retirant sa partie décimale.</p>
+            <p class="dd"><span class="a_1">random() :</span>Retourne un réel aléatoire dans [0, 1[ </p>
+        <div id="code-runner_7" class="code-runner">
+            <textarea class="code-input js_code" id="input-7">
+            <!DOCTYPE html>
+<html>
+<body>
+
+
+<h2> Math.abs() Method</h2>
+<p>Math.abs() renvoie la valeur absolue d'un nombre :</p>
+<p id="remo"></p>
+<p id="pemo"></p>
+<p id="yk"></p>
+<p id="fk"></p>
+
+<script>
+document.getElementById("remo").innerHTML = Math.abs(-7.25);
+document.getElementById("pemo").innerHTML = Math.sqrt(9);
+document.getElementById("yk").innerHTML = Math.round(4.5);
+document.getElementById("fk").innerHTML = Math.trunc(8.76);
+</script>
+
+</body>
+</html>               
+            </textarea>
+            <button onclick="runCode('input-7','out_7')" style="background-color:#0e2d4e">exécuter le code</button>
+            <iframe style="border: 2px solid #f7df1e;" class='output' id='out_7' src="iframe.html:blank"></iframe>
+        </div>
+        <h2 class="a" id="k">Les chaînes de caractères : <button class="btn" id="f8" onclick="exmple('code-runner_8','f8')" style="background-color:#f7df1e">Exemples ↓</button></h2>
+            <p class="dd"><span class="a_1">ch.length :</span>Proprièté qui retourne la longeur de ch.</p>
+            <p class="dd"><span class="a_1">ch.charAt(p):</span>Retourne le caractére d'indice p . </p>
+            <p class="dd"><span class="a_1">ch.indexOf(ch1,p) :</span>Retourne la position de la 1ère occurrence de ch1 dans ch, effectuant la recherche à partir de la position p (sinon -1 ).</p>
+            <p class="dd"><span class="a_1">ch.lastIndexOf(ch1,p) : </span>Retourne la position de la derniére occurence de ch1 dans ch à partir  de la position p . </p>
+            <p class="dd"><span class="a_1">ch.substr(p,l) :</span>Retourne une sous-chaîne commençant à la position p et de longueur l.</p>
+            <p class="dd"><span class="a_1">ch.replace(ch1,ch2) :</span>Remplace , dans ch , toutes les occurences de ch1 par ch2.</p>
+            <p class="dd"><span class="a_1">ch.toLowerCase() :</span>Convertit tous les caractéres de ch en minuscule.</p>
+            <p class="dd"><span class="a_1">ch.toUpperCase() :</span>Convertit tous les caractéres de ch en majuscule.</p>
+            <p class="dd"><span class="a_1">ch.trim() :</span>Supprime tous les espaces existant au début et à la fin de ch.</p>
+            <p class="dd"><span class="a_1">String.fromCharCode(num1, ..., numN) :</span>Retourne une chaîne formée par la concaténation des résultats de conversion des codes* passés en paramètres.</p>
+            <p class="dd"><span class="a_1">ch.charCodeAt(p) :</span>Retourne le code du caractère à la position p.</p>
+
+
+        <div id="code-runner_8" class="code-runner">
+            <textarea class="code-input js_code" id="input-8">
+            <!DOCTYPE html>
+<html>
+<body>
+
+
+
+<p>La propriété length renvoie la longueur d'une chaîne.</p>
+
+<p>Trouvez la longueur de "Hello World !" :</p>
+
+<p id="rt"></p>
+<p id="emo"></p>
+<p>Find "welcome":</p>
+<p id="op"></p>
+
+
+
+<script>
+let text = "Hello World!";
+let length = text.length;
+document.getElementById("rt").innerHTML = length;
+
+let mott = "HELLO WORLD";
+let letter = mott.charAt(0);
+
+document.getElementById("op").innerHTML = letter;
+let b= "Hello world, welcome to the universe.";
+let result = b.indexOf("welcome");
+
+document.getElementById("op").innerHTML = result;
+
+</script>
+
+</body>
+</html>
+               
+            </textarea>
+            <button onclick="runCode('input-8','out_8')" style="background-color:#0e2d4e">exécuter le code</button>
+            <iframe style="border: 2px solid #f7df1e;" class='output' id='out_8' src="iframe.html:blank"></iframe>
+        </div>
+        <h2 class="a" id="m">L'objet Date : <button class="btn" id="f9" onclick="exmple('code-runner_9','f9')" style="background-color:#f7df1e">Exemples ↓</button></h2>
+            <p class="dd"><span class="a_1"> Date() : </span>Crée un nouvel objet Date.</p>
+            <p class="dd"><span class="a_1">d.getDate() : </span>Retourne le jour du mois (entre 1 et 31).</p>
+            <p class="dd"><span class="a_1">d.getMonth() :</span> Retourne le numéro du mois.</p>
+            <p class="dd"><span class="a_1">d.getFullYear() : </span> Retourne la valeur de l'année sur 4 chiffres.</p>
+            <p class="dd"><span class="a_1">d.setDate() :</span>Modifie le numéro du jour du mois.</p>
+            <p class="dd"><span class="a_1">d.setMonth() :</span>Modifie le numéro du mois.</p>
+            <p class="dd"><span class="a_1">d.setFullYear() :</span>Modifie la valeur de l'année.</p>
+            <p class="dd"><span class="a_1">d.toString() :</span>Retourne une chaine de caractéres représentant la date d.</p>
+        <div id="code-runner_9" class="code-runner">
+            <textarea class="code-input js_code" id="input-9">
+            <!DOCTYPE html>
+<html>
+<body>
+
+
+
+<p>À l'aide de new Date(7 numbers), crée un nouvel objet de date avec la date et l'heure spécifiées :</p>
+
+<p id="de"></p>
+<p>getDate() renvoie le jour du mois (de 1 à 31) d'une date :</p>
+
+<p id="az"></p>
+<p>getMont() 
+renvoie le mois (de 0 à 11) d'une date :</p>
+
+<p id="yu"></p>
+
+<script>
+const d = new Date(2018, 11, 24, 10, 33, 30, 0);
+document.getElementById("de").innerHTML = d;
+
+const da = new Date();
+let day = da.getDate();
+document.getElementById("az").innerHTML = day;
+
+const di= new Date();
+let month = di.getMonth();
+document.getElementById("yu").innerHTML = month;
+</script>
+
+</body>
+</html>
+               
+            </textarea>
+            <button onclick="runCode('input-9','out_9')" style="background-color:#0e2d4e">exécuter le code</button>
+            <iframe style="border: 2px solid #f7df1e;" class='output' id='out_9' src="iframe.html:blank"></iframe>
+        </div>
+        <div style="text-align: right;">
+            <button class="last_btn_1" onclick="document.location='js_quiz.html'" style="background-color:#f7df1e" >Accéder au Quiz</button>
+        </div>
+       
+        
+    </article>
+    <script src="assets/js/script_1.js" defer></script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style-4.css">
+    <link rel="icon" href="assets/img/html5.png">
+    <title>HTML_Cours</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="assets/img/sti.png" alt="STI_photo">
+            <h4>développement web</h4>
+
+        </div>
+        <ul class="nav-items">
+            <li class="nav-item"><a href="accueil.html" class="nav-link">Accueil</a></li>
+            <li><div id="contact"><input type="text" placeholder="écrire ton message" id="contact-1"><button onclick="envoyer()">Envoyer</button></div></li>
+            <li class="nav-item"><a class="nav-link" onclick="contact()">Contact</a></li>
+            <li><img src="assets/img/cours.png" alt="Cours_Logo" width="65" height="60"></li> 
+        </ul>
+    </nav>
+    <div class="nav_cours" >
+        <h1>Les element de cours</h1>
+        <ul>
+            <li onclick="scrol('#a')">les Eléments de 1er niveau</li>
+            <li onclick="scrol('#b')"> Eléments d'en tete</li>
+            <li onclick="scrol('#c')"> Boite</li>
+            <li onclick="scrol('#d')">Tableau</li>
+            <li onclick="scrol('#e')">Formulaire</li>
+            <li onclick="scrol('#f')"> Attributs globaux</li>
+            <li onclick="scrol('#g')"> Eléments de section</li>
+            <li onclick="scrol('#k')">Eléments de structuration de texte et média</li>
+            <li onclick="document.location.href='#m'">Listes</li>
+            <li onclick="document.location.href='#n'">Evènements</li>     
+        </ul>
+    </div>
+    <article >
+		<div>
+		<p class="h1"><img src="assets/img/html5.png" style="width:6%; height: 6%;" alt="HTML5_Logo">HTML</p>
+		
+			<h3 style="font-size: 2.2rem; font-weight: bold;color: #0e2d4e; margin-bottom: 1.3%;">Introudction : </h3>
+			<p style="font-family:sans-serif; font-size: 1.15rem;">Qu'est-ce que JavaScript ?
+            HyperText Markup Language (HTML) est le code utilisé pour structurer une page web et son contenu. Par exemple, le contenu de votre page pourra être structuré en un ensemble de paragraphes, une liste à puces ou avec des images et des tableaux de données. Comme le suggère le titre, cet article vous fournit les bases de compréhension du HTML et de ses fonctions.HTML est au cœur de chaque page Web. Derrière chaque page Web que vous avez visitée, il y a du code HTML que votre navigateur Web utilise pour afficher des éléments tels que du texte, des images et des tableaux.
+            </p>
+
+		<video controls src="assets/video/HTML.mp4" class="e" style="width: 55%;height: 45%;margin-top: 2% ; margin-left: 23%;"></video>
+        </div>
+
+        <h2 id="a" class="a">les Eléments de 1er niveau : <button class="btn" id="f1" style="background-color:#e34c26" onclick="exmple('code-runner_1','f1')">Exemples ↓</button></h2>       
+            <p class="dd"><span class="a_1">&lt;html> :</span> Représente la racine d'un document HTML</p>
+            <p class="dd"><span class="a_1">&lt;head> :</span> Conteneur de métadonnées placé entre la balise</p>
+            <p class="dd"><span class="a_1">&lt;body> :</span> Définit le corps du document .</p>
+        <div id="code-runner_1" class="code-runner">
+            <textarea class="code-input html_code" id="input-1">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Un titre de page significatif</title>
+    </head>
+    <body>
+
+        Le contenu du dossier......
+
+    </body>
+</html>               
+            </textarea>
+            <button onclick="runCode('input-1','out_1')" style="background-color:#0e2d4e">exécuter le code</button>
+            <iframe style="border: 2px solid #e34c26;" class='output' id='out_1' src="iframe.html:blank"></iframe>
+        </div>
+        <h2 id="b" class="a">Eléments d'en tête : <button class="btn" id="f2" style="background-color:#e34c26" onclick="exmple('code-runner_2','f2')">Exemples ↓</button></h2>
+            <p class="dd"><span class="a_1">&lt;link> :</span> Définit la relation entre le document actuel et une resource externe.</p>
+            <p class="dd"><span class="a_1">&lt;meta> :</span> Définit les métadonnées du document.</p>
+            <p class="dd"><span class="a_1">&lt;script> :</span>Intègre un script coté client (JavaScript).</p>
+            <p class="dd"><span class="a_1">&lt;style> : </span> Définit les information de style (CSS) pour un document. </p>
+            <p class="dd"><span class="a_1">&lt;title> :</span>Définit le titre du document.</p>
+        <div id="code-runner_2" class="code-runner">
+            <textarea class="code-input html_code" id="input-2">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+    <style>
+        p {
+        color: blue;
+        font-size: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+    <script>
+        document.write("Bonjour le monde!");
+    </script>
+    <p>Ceci est un exemple de paragraphe.</p>
+    
+    </body>
+</html>
+                </textarea>
+            <button onclick="runCode('input-2','out_2')" style="background-color:#0e2d4e">exécuter le code</button>
+            <iframe style="border: 2px solid #e34c26;" class='output' id='out_2' src="iframe.html:blank"></iframe>
+        </div>
+        <h2 class="a" id="c">Boite: <button class="btn" id="f3" style="background-color:#e34c26" onclick="exmple('code-runner_3','f3')">Exemples ↓</button></h2>
+            <p class="dd"><span class="a_1">&lt;span> : </span>Regroupe des eléments dans un bloc de contenu.</p>
+            <p class="dd"><span class="a_1">&lt;div> :</span> Grouper plusieurs éléments html de type block.</p>
+            <p class="dd"><span class="a_1">&lt;iframe> :</span> Définit un cadre en ligne.</p>
+        <div id="code-runner_3" class="code-runner">
+            <textarea class="code-input html_code" id="input-3"> 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+  </head>
+  <body>
+    <p>Ceci est un exemple<span style="color: red;">texte</span>.</p>
+    <!--<iframe  src="https://www.example.com" width="100%" height="400"></iframe> (Non disponible actuellement)-->
+    <div style="background-color: lightblue; padding: 10px;">
+      <h2>Ceci est un titre dans un élément div</h2>
+      <p>Ceci est du texte dans un élément div.</p>
+    </div>
+  </body>
+</html>             
+            </textarea>
+            <button onclick="runCode('input-3','out_3')" style="background-color:#0e2d4e">exécuter le code</button>
+            <iframe style="border: 2px solid #e34c26;" class='output' id='out_3' src="iframe.html:blank"></iframe>
+        </div>
+        <h2 class="a" id="d">Tableau<button class="btn" id="f4" style="background-color:#e34c26" onclick="exmple('code-runner_4','f4')">Exemples ↓</button></h2>
+            <p class="dd"><span class="a_1">&lt;table> :</span>Définit un tableau. </p>
+            <p class="dd"><span class="a_1">&lt;caption> :</span> Définit une légende de tableau.</p>
+            <p class="dd"><span class="a_1">&lt;tr> :</span>Définit une ligne dans un tableau.</p>
+            <p class="dd"><span class="a_1">&lt;th> :</span>Définit une cellule d'en tete dans un tableau.</p>
+            <p class="dd"><span class="a_1">&lt;td> :</span>Définit une cellule dans un tableau.</p>
+        <div id="code-runner_4" class="code-runner">
+            <textarea class="code-input html_code" id="input-4"> 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>Example de Table</title>
+    </head>
+    <body>
+    <table border="1">
+        <caption>Examples de table</caption>
+        <thead>
+        <tr>
+            <th>Colonne 1</th>
+            <th>Colonne 2</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Ligne 1, Colonne 1</td>
+            <td>Ligne 1, Colonne 2</td>
+        </tr>
+        <tr>
+            <td>Ligne 2, Colonne 1</td>
+            <td>Ligne 2, Colonne 2</td>
+        </tr>
+        </tbody>
+    </table> 
+    </body>
+</html>              
+            </textarea>
+            <button onclick="runCode('input-4','out_4')" style="background-color:#0e2d4e">exécuter le code</button>
+            <iframe style="border: 2px solid #e34c26;" class='output' id='out_4' src="iframe.html:blank"></iframe>
+        </div>
+        <h2 class="a" id="e">Formulaire  <button class="btn" id="f5" style="background-color:#e34c26" onclick="exmple('code-runner_5','f5')">Exemples ↓</button></h2>
+            <p class="dd"><span class="a_1">&lt;form> :</span>Créer un formulaire HTML.</p>
+            <p class="dd"><span class="a_1">&lt;fieldset> :</span>Regroupe des éléments liés dans un formulaire. </p>
+            <p class="dd"><span class="a_1">&lt;legend> :</span>Définit une légende pour l'élément &lt; fieldset >.</p>
+            <p class="dd"><span class="a_1">&lt;label> :</span>Définit un libellé pour un élément graphique.</p>
+            <p class="dd"><span class="a_1">&lt;input> :</span>Définit un champ de saisie de types : "button" ,"time","checkbox","date","email","image","number","password","radio","range","reset","submit","tel","text","url".</p>
+            <p class="dd"><span class="a_1">&lt;textarea> :</span>Définit une zone de saisie de texte multilignes.</p>
+            <p class="dd"><span class="a_1">&lt;select> :</span>Définit une liste déroulante.</p>
+            <p class="dd"><span class="a_1">&lt;datalist> :</span>Spécifie une liste d'options prédéfinies connectée à un élément  &lt; input > .</p>
+            <p class="dd"><span class="a_1">&lt;option> : </span>Définit une option dans une liste de sélection.</p>
+        <div id="code-runner_5" class="code-runner">
+            <textarea class="code-input html_code" id="input-5"> 
+&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Exemple de formulaire&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Exemple de formulaire&lt;/h1&gt;
+    &lt;form action="/ma-page-de-traitement" method="post"&gt;
+        &lt;label for="nom"&gt;Nom :&lt;/label&gt;
+        &lt;input type="text" id="nom" name="user_nom"&gt;
+        &lt;label for="email"&gt;Email :&lt;/label&gt;
+        &lt;input type="email" id="email" name="user_email"&gt;
+        &lt;label for="message"&gt;Message :&lt;/label&gt;
+        &lt;textarea id="message" name="user_message"&gt;&lt;/textarea&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;            
+            </textarea>
+            <button onclick="runCode('input-5','out_5')" style="background-color:#0e2d4e">exécuter le code</button>
+            <iframe style="border: 2px solid #e34c26;" class='output' id='out_5' src="iframe.html:blank"></iframe>
+        </div>
+        <h2 class="a" id="f"> Attributs globaux : <button class="btn" id="f6" style="background-color:#e34c26" onclick="exmple('code-runner_6','f6')">Exemples ↓</button></h2>
+            <p class="dd"><span class="a_1"> class  :</span> Spécifie un nom de classe pour un élément.</p>
+            <p class="dd"><span class="a_1"> hidden : </span>Renseigne la visibilité d'un élément.</p>
+            <p class="dd"><span class="a_1">id :</span>Spécifie un identifiant unique pour un élément HTML.</p>
+            <p class="dd"><span class="a_1">lang :</span>Spécifie la langue du contenu de l'élément.</p>
+            <p class="dd"><span class="a_1">style  :</span>Spécifie un style en ligne.</p>
+            <p class="dd"><span class="a_1">title  :</span>Spécifie des informations supplémentaires sur un élément .</p>
+
+        <div id="code-runner_6" class="code-runner">
+            <textarea class="code-input html_code" id="input-6">
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+    <meta charset="UTF-8">
+    <title>Exemple d'attributs en HTML</title>
+    </head>
+    <body>
+    <h1 id="titre-principal" class="important" lang="fr" style="color: red;font-weight: bold;">Exemple d'attributs en HTML</h1>
+    <p class="important" hidden>Ce paragraphe est important mais caché</p>
+    </body>
+</html>             
+            </textarea>
+            <button onclick="runCode('input-6','out_6')" style="background-color:#0e2d4e">exécuter le code</button>
+            <iframe style="border: 2px solid #e34c26;" class='output' id='out_6' src="iframe.html:blank"></iframe>
+        </div>
+        <h2 class="a" id="g">Eléments de section : <button class="btn" id="f7" style="background-color:#e34c26" onclick="exmple('code-runner_7','f7')">Exemples ↓</button></h2>
+            <p class="dd"><span class="a_1">&lt;header> :</span>Conteneur pour le contenu d’introduction ou unensemble de liens de navigation.</p>
+            <p class="dd"><span class="a_1">&lt;nav> :</span>  Définit un ensemble de liens de navigation.</p>
+            <p class="dd"><span class="a_1">&lt;footer> : </span>  Définit un pied de page pour un document ou une section.</p>
+            <p class="dd"><span class="a_1">&lt;section> :</span> Définit une section dans un document.</p>
+            <p class="dd"><span class="a_1">&lt;article> :</span> Spécifie un contenu indépendant et autonome.</p>
+            <p class="dd"><span class="a_1">&lt;aside> :</span>Définit un contenu en dehors du contenu principal.</p>
+            <p class="dd"><span class="a_1">&lt;main> :</span>Définit le contenu principal d'un document.</p>
+        <div id="code-runner_7" class="code-runner">
+            <textarea class="code-input html_code" id="input-7">
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+    <meta charset="UTF-8">
+    <title>Exemple d'éléments de section en HTML</title>
+    </head>
+    <body>
+    <header>
+        <h1>Titre principal de la page</h1>
+    </header>
+    <nav>
+        <ul>
+        <li><a href="#">Lien 1</a></li>
+        <li><a href="#">Lien 2</a></li>
+        <li><a href="#">Lien 3</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+        <h2>Section 1</h2>
+        <p>Voici un paragraphe de texte.</p>
+        </section>
+        <section>
+        <h2>Section 2</h2>
+        <p>Voici un autre paragraphe de texte.</p>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright © 2023</p>
+    </footer>
+    </body>
+</html>            
+            </textarea>
+            <button onclick="runCode('input-7','out_7')" style="background-color:#0e2d4e">exécuter le code</button>
+            <iframe style="border: 2px solid #e34c26;" class='output' id='out_7' src="iframe.html:blank"></iframe>
+        </div>
+        <h2 class="a" id="k">Eléments de structuration de texte et média : <button class="btn" id="f8" style="background-color:#e34c26" onclick="exmple('code-runner_8','f8')">Exemples ↓</button></h2>
+            <p class="dd"><span class="a_1">&lt;cite> :</span> Définit le titre d'une œuvre.</p>
+            <p class="dd"><span class="a_1">&lt;p> :</span>Définit un paragraphe. </p>
+            <p class="dd"><span class="a_1">&lt;source> :</span>Spécifie plusieurs ressources multimédias pour les éléments multimédias.</p>
+            <p class="dd"><span class="a_1">&lt;h<sub>n</sub>> : </span>Définit un titre de niveau n (de 1 à 6). </p> 
+            <p class="dd"><span class="a_1">&lt;hr> :</span>Définit une rupture thématique sous forme de ligne horizontale.</p>
+            <p class="dd"><span class="a_1">&lt;img> :</span>Intègre une image.</p>
+            <p class="dd"><span class="a_1">&lt;figure> :</span>Spécifie un conteneur autonome qui peut contenir divers éléments.</p>
+            <p class="dd"><span class="a_1">&lt;figcaption> :</span>Définit une légende pour un élément &lt; figure >.</p>
+            <p class="dd"><span class="a_1">&lt;audio> :</span>Intégrer du contenu sonore dans un document.</p>
+            <p class="dd"><span class="a_1">&lt;video> :</span> Intègre du contenu vidéo dans un document.</p>
+            <p class="dd"><span class="a_1">&lt;a> :</span>Définit un lien hypertexte via l’attribut href. </p>
+            <p class="dd"><span class="a_1">&lt;br> : </span>Définit un retour à la ligne.</p>
+            <p class="dd"><span class="a_1">&lt;address> :</span>Définit les coordonnées de l'auteur/propriétaire d'un document ou d'un article.</p>
+            <p class="dd"><span class="a_1">&lt;mark> :</span>Définit le texte qui doit être marqué ou mis en surbrillance.</p>
+            <p class="dd"><span class="a_1">&lt;details> :</span>Spécifie des détails supplémentaires que l’utilisateur peut ouvrir et fermer à la demande.</p>
+            <p class="dd"><span class="a_1">&lt;summary> :</span>Définit un en-tête visible pour l'élément &lt; details >.</p>
+        <div id="code-runner_8" class="code-runner">
+            <textarea class="code-input html_code" id="input-8">
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+    <meta charset="UTF-8">
+    <title>Exemple d'éléments de structuration de texte et média en HTML</title>
+    </head>
+    <body>
+    <h1>Titre principal de la page</h1>
+    <h6>Titre principal de la page</h6>
+    <p>Voici un paragraphe de texte qui contient un <a href="#">lien</a> et une <strong>mise en évidence</strong>.</p>
+    <figure>
+        <img src="image.jpg" alt="Image de paysage">
+        <figcaption>Figure : Une belle vue panoramique</figcaption>
+    </figure>
+    <hr>   
+    <video src="assets/video/video.mp4" controls></video>
+    <audio src="audio.mp3"></audio> 
+    </body>
+</html>               
+            </textarea>
+            <button onclick="runCode('input-8','out_8')" style="background-color:#0e2d4e">exécuter le code</button>
+            <iframe style="border: 2px solid #e34c26;" class='output' id='out_8' src="iframe.html:blank"></iframe>
+        </div>
+        <h2 class="a" id="m">Listes <button class="btn" id="f9" style="background-color:#e34c26" onclick="exmple('code-runner_9','f9')">Exemples ↓</button></h2>
+            <p class="dd"><span class="a_1">&lt;ul> : </span> Définit une liste à puces.</p>
+            <p class="dd"><span class="a_1">&lt;ol> : </span> Définit une liste ordonnée.</p>
+            <p class="dd"><span class="a_1">&lt;li> :</span>  Définit un élément dans une liste.</p>
+        <div id="code-runner_9" class="code-runner">
+            <textarea class="code-input html_code" id="input-9">
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+    <meta charset="UTF-8">
+    <title>Exemple d'éléments de structuration de texte et média en HTML</title>
+    </head>
+    <body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        </ul>
+        
+        <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        </ol> 
+    </body>
+</html>               
+            </textarea>
+            <button onclick="runCode('input-9','out_9')" style="background-color:#0e2d4e">exécuter le code</button>
+            <iframe style="border: 2px solid #e34c26;" class='output' id='out_9' src="iframe.html:blank"></iframe>
+        </div>
+        <h2 class="a" id="n">Evénements <button class="btn" id="f10" style="background-color:#e34c26"  onclick="exmple('code-runner_10','f10')" >Exemples ↓</button></h2>
+            <p class="dd"><span class="a_1">onblur : </span> Se déclenche au moment où l'élément perd le focus.</p>
+            <p class="dd"><span class="a_1">onclick : </span> Se déclenche lors d’un clic sur l’élément.</p>
+            <p class="dd"><span class="a_1">onfocus :</span>  Se déclenche au moment où l'élément obtient le focus.</p>
+            <p class="dd"><span class="a_1">oninput :</span>Se déclenche dès que la valeur d'un élément a changé. </p>
+            <p class="dd"><span class="a_1">onload :</span>Se déclenche lorsque la page est complètement chargée.</p>
+            <p class="dd"><span class="a_1">onmouseover :</span>Se déclenche lorsque le pointeur de la souris survole l’élément.</p>
+            <p class="dd"><span class="a_1">onsubmit :</span>Se déclenche lorsqu'un formulaire est soumis.</p>
+        <div id="code-runner_10" class="code-runner">
+            <textarea class="code-input html_code" id="input-10">   
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Exemple d'événements en HTML</title>
+    <script>
+        function onFocus() {
+        document.getElementById("input").style.background = "yellow";
+        }
+        function onBlur() {
+        document.getElementById("input").style.background = "white";
+        }  
+        function onClick() {
+        document.write("Le bouton a été cliqué !");
+        }
+    </script>
+    </head>
+    <body>
+    <input id="input" type="text" onblur="onBlur()" onfocus="onFocus()">
+    <button onclick="onClick()">Cliquez ici</button>
+    </body>
+</html>            
+            </textarea>
+            <button onclick="runCode('input-10','out_10')" style="background-color:#0e2d4e">exécuter le code</button>
+            <iframe style="border: 2px solid #e34c26;" class='output' id='out_10' src="iframe.html:blank"></iframe>
+        </div>
+        <div style="text-align: right;">
+            <button class="last_btn_1" onclick="document.location='html_quiz.html'" style="background-color:#e34c26" >Accéder au Quiz</button>
+        </div>
+        
+        
+    </article>
+    <script src="assets/js/script_1.js" defer></script>
+    
+</body>
+</html>

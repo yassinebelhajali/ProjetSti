@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="assets/css/style-3.css" rel="stylesheet"/>
+<link href="assets/img/html5.png" rel="icon"/>
+<title>HTML_Quiz</title>
+</head>
+<body>
+<nav>
+<div class="logo">
+<img alt="Logo STI" src="assets/img/sti.png"/>
+<h4>développement web</h4>
+</div>
+<ul class="nav-items">
+<li class="nav-item"><a class="nav-link" href="accueil.html">Accueil</a></li>
+<li><div id="contact"><input id="contact-1" placeholder="écrire ton message" type="text"/><button onclick="envoyer()">Envoyer</button></div></li>
+<li class="nav-item"><a class="nav-link" onclick="contact()">Contact</a></li>
+<li><img alt="Illustration quiz" height="65" src="assets/img/quiz.png" width="65"/></li>
+</ul>
+</nav>
+<section class="quiz_place">
+<h1 class="t_quiz"><img alt="Logo HTML5" height="80" src="assets/img/html5.png" width="80"/> HTML Quiz</h1>
+<div class="quiz-box" id="quiz-box">
+<header>
+<div class="title">Questions pédagogiques sur HTML</div>
+</header>
+<section id="sec">
+<div class="que_text">
+<h4 id="q">Quel mot n'est une valeur de l'attribut type dans la balise "input" d'un formulaire</h4>
+</div>
+<div class="option_list">
+<div class="option" id="op_1" onclick="quiz('rep_1' , 'op_1','#f8d7da')">
+<span id="a">Range</span>
+<div class="icon cross" id="rep_1">✘</div>
+</div>
+<div class="option" id="op_2" onclick="quiz('rep_2' , 'op_2','#f8d7da')">
+<span id="b">Button</span>
+<div class="icon cross" id="rep_2">✘</div>
+</div>
+<div class="option" id="op_3" onclick="quiz('rep_3' , 'op_3','#d4edda')">
+<span id="c">Legend</span>
+<div class="icon tick" id="rep_3">✔</div>
+</div>
+<div class="option" id="op_4" onclick="quiz('rep_4' , 'op_4','#f8d7da')">
+<span id="d">Text</span>
+<div class="icon cross" id="rep_4">✘</div>
+</div>
+</div>
+</section>
+<footer>
+<p><span id="p">1</span>sur 10 Questions</p>
+<button class="next_btn" id="btn" onclick="next_quiz()">suivant</button>
+</footer>
+</div>
+<div class="quiz_html" id="quiz_html" style="display: none; ">
+<h2 class="res_html" style="font-size: 6rem; font-weight: bold; color: #e34c26;">Resultat</h2>
+<p class="not_html"><span id="not_html">2</span>  sur 10</p>
+<p class="not_html" id="pe" style="color: green; font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;">vous pouvez être fier de vous !</p>
+<img alt="Bonne réponse" height="150" src="assets/img/pass(2).png" style="position: relative; left: 33%;" width="150"/>
+<button class="retour_html" onclick="document.location='html_quiz.html'" style="position: relative; left: 35%;width: 30%;height: 40px;">Retour Au Quizz</button>
+<button class="retour_html" onclick="document.location='html_cours.html'" style="position: relative; right: 60%;width: 30%;height: 40px;">Accéder au Cours</button>
+</div>
+<div class="quiz_html" id="quiz_html1" style="display: none;">
+<h2 class="res_html" style="font-size: 6rem; font-weight: bold; color: #e34c26;">Resultat</h2>
+<p class="not_html"><span id="not_html1">2</span>  sur 10</p>
+<p class="not_html" id="pe1" style="color: red; font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;">Vous pouvez retenter !</p>
+<img alt="Mauvaise réponse" height="150" src="assets/img/fail.png" style="position: relative; left: 30%;" width="200"/>
+<button class="retour_html" onclick="document.location='html_quiz.html'" style="  position: relative; left: 25%;top: 5%; width: 30%;height: 40px;">Retour Au Quizz</button>
+<button class="retour_html" onclick="document.location='html_cours.html'" style="  position: relative; left: 5%;bottom:  3%; width: 30%;height: 40px;">Accéder au Cours</button>
+</div>
+</section>
+<script defer="" src="assets/js/quiz-1.js"></script>
+</body>
+</html>

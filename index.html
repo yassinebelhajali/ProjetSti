@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="assets/css/style-1.css" rel="stylesheet"/>
+<link href="assets/css/style-2.css" rel="stylesheet"/>
+<link href="assets/img/sti.png" rel="icon"/>
+<title>Dévloppement Web</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+</head>
+<body>
+<nav>
+<div class="logo">
+<img alt="Logo STI" src="assets/img/sti.png"/>
+<h4>développement web</h4>
+</div>
+<ul class="nav-items">
+<li class="nav-item"><a class="nav-link" href="accueil.html">Accueil</a></li>
+<li><div id="contact"><input id="contact-1" placeholder="écrire ton message" type="text"/><button onclick="envoyer()">Envoyer</button></div></li>
+<li class="nav-item"><a class="nav-link" onclick="contact()">Contact</a></li>
+<li class="nav-item" onclick="show()"><a class="nav-link">Inscription</a></li>
+</ul>
+</nav>
+<div id="flow">
+<section class="intro" id="intro">
+<div class="intro-section">
+<div class="content">
+<div><p class="h1">Bienvenue</p>  <span id="n_p"></span></div>
+<h2>Le développement web est le processus de création et de maintenance de sites web ou d’applications web.</h2>
+<p>Le <span> développement web </span>repose sur l’utilisation de langages techniques (HTML/CSS, JavaScript…)</p>
+<button class="plus" id="btn" onclick="show_2()" style="font-family: Open Sans;">Savoir Plus</button>
+</div>
+<div class="intro-img">
+<img alt="Illustration" src="assets/img/img.png"/>
+</div>
+</div>
+</section>
+<span id="vers"></span>
+<div id="visible">
+<h1 class="l_w_d" id="l_w_d">Langages Web Developer</h1>
+<div style="text-align:center;margin-top: 50px;">
+<video autoplay="" controls="" height="400" id="vedio" width="600">
+<source src="assets/video/vedio-1.mp4" type="video/mp4"/>
+</video>
+</div>
+<section class="hero" id="hero">
+<div class="html">
+<img alt="HTML5_Photo" height="70" src="assets/img/html5.png" width="70"/>
+<h2>HTML</h2>
+<p style="font-size: 20px; font-family: sans-serif; margin: 20px 0px; width: 80%; text-align: center;font-weight: bolder;">Le langage pour créer des pages web</p>
+<a class="link" href="html_cours.html">Cours</a><br/>
+<a class="link" href="html_quiz.html">Quiz</a>
+</div>
+<div class="css">
+<img alt="CSS3_Photo" height="70" src="assets/img/CSS_Logo.png" width="70"/>
+<h2>CSS</h2>
+<p style="font-size: 20px; font-family: sans-serif; margin: 20px 0px; width: 80%; text-align: center;font-weight: bolder;">Le langage pour styliser les pages Web</p>
+<a class="link" href="css_cours.html">Cours</a><br/>
+<a class="link" href="css_quiz.html">Quiz</a>
+</div>
+<div class="js">
+<img alt="Js_photo" height="70" src="assets/img/JAVA_SCRIPT.png" width="70"/>
+<h2>JS</h2>
+<p style="font-size: 20px; font-family: sans-serif; margin: 20px 0px; width: 80%; text-align: center;font-weight: bolder;">Le langage de programmation des pages web</p>
+<a class="link" href="js_cours.html">Cours</a><br/>
+<a class="link" href="js_quiz.html">Quiz</a>
+</div>
+</section>
+<div class="footer_d1">
+<a href="https://www.codecademy.com"><img alt="codeCademy" src="assets/img/codecademy.png" title="CodeCademy"/></a>
+<a href="https://www.w3schools.com/"><img alt="W3school" src="assets/img/w3s.png" title="W3school"/></a>
+<a href="https://www.udemy.com/"><img alt="Udemy" src="assets/img/udemy.png" title="Udemy"/></a>
+<a href="https://www.sololearn.com/"><img alt="Sololearn" src="assets/img/Sololearn.png" title="Sololearn"/></a>
+<a href="https://openclassrooms.com/"><img alt="Open_classroom" src="assets/img/openclassroom.png" title="Open_classroom"/></a>
+</div>
+</div>
+<footer>© 2023 Copyright: Informatique.com</footer>
+</div>
+<div class="login" id="inscri">
+<form>
+<h2>Connexion</h2>
+<div class="margin">
+<div class="inputt">
+<input id="nom" placeholder="Nom" required="" type="text"/>
+</div>
+<p id="nomError" style="color:red; font-size:17px;">saisir correctement votre nom</p>
+</div>
+<div class="margin">
+<div class="inputt">
+<input id="prenom" placeholder="Prenom" required="" type="text"/>
+</div>
+<p id="prenomError" style="color:red; font-size:17px; ">saisir correctement votre pénom</p>
+</div>
+<div class="margin">
+<div class="inputt">
+<input id="email" placeholder="email_(option)" type="email"/>
+</div>
+<p id="emailError" style="color:red; font-size:17px;"></p>
+</div>
+<input class="button" onclick="login()" type="button" value="connexion"/>
+</form>
+</div>
+<script defer="" src="assets/js/script.js"></script>
+</body>
+</html>

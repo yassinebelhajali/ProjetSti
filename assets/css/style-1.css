@@ -1,0 +1,378 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    height: 10vh;
+    position: fixed;
+    top: 0px;
+    background-color: #0e2d4e;
+    width: 100%;
+    z-index: 99;
+    color: #dee3e8;
+}
+
+
+
+nav .logo {
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+}
+nav .logo img {
+    padding-left: 0.75rem;
+    width: 65px;
+    height: 65px;
+    margin-right: 10px;
+
+}
+nav .logo h4 {
+    font-family: cursive;
+}
+nav .nav-items {
+    display: flex;
+    list-style-type: none;
+    margin-right: 50px;
+}
+nav .nav-items input{
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    width: 70%;
+    background-color: #ffffff;
+    color: #0e2d4e;
+}
+nav .nav-items button{
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #0e2d4e;
+    cursor: pointer;
+    padding: 10px;
+}
+nav .nav-items button:hover{
+    background-color: #3e5671;
+    color:white;
+
+}
+nav .nav-items #contact{
+    display: none;
+    justify-content: space-between;
+    
+}
+nav .nav-items .nav-item {
+    display: flex;
+    align-items: center;
+    margin: 0px 10px;
+}
+nav .nav-link {
+    text-decoration: none;
+    color: #dee3e8;
+    font-size: 1.4rem;
+    font-family: sans-serif;
+    user-select: none;
+}
+nav .nav-link:hover{
+    color: #fe246f;
+    border-bottom: 3px solid #fe246f;
+    cursor: pointer;
+}
+body{
+    background-color: #e6e6e6;
+}
+.intro {
+    background-color: #e6e6e6;
+    margin-top: 10vh;
+}
+.intro-section {
+    width: 100%;
+    height: 82vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 5rem;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+.intro-section .content .h1{
+    color: #0f3256;
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    animation: anim_h1 3s infinite alternate ease-in-out;
+    display: inline-block;
+}
+@keyframes anim_h1 {
+    0%{
+        color:#0f3256;
+    }
+    33%{
+        color:#0f0f56;
+    }
+    66%{
+        color: #0f5656;
+    }
+}
+.intro-section .content #n_p{
+    color: #009dff;
+    font-size: 3rem;
+    font-weight: bolder;
+    display: inline-block;
+    font-family:sans-serif;
+    animation: writing-animation 5s ease-in-out;
+    animation-play-state: paused;
+}
+@keyframes writing-animation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+.intro-section .content h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: black;
+    font-family:'Open Sans';
+
+}
+.intro-section p {
+    color:#666666;
+    font-size: 1.4rem;
+
+
+}
+
+.login{
+    justify-content: center;
+    margin-top: 50px;
+    width: 400px;
+    border-radius: 20px;
+    background:#e6e6e6;
+    position: fixed;
+    height: 480px;
+    top: 7vh;
+    right: 20px;
+    border: 3px solid black;
+    display: none;
+ }
+ .login::before{
+    content: '';
+    position: absolute;
+    top: -13px;
+    right: 40px;
+    width: 20px;
+    height: 20px;
+    background: #e6e6e6;
+    transform: rotate(45deg);
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+ }
+ .login h2{
+    margin-top: 40px;
+    font-size: 32px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #0f3256;
+    animation: anim_h1 3s infinite alternate ease-in-out;
+ }
+ .inputt{
+    width: 310px;
+    border-bottom: 3px solid black;
+ }
+ .margin {
+    margin: 20px 0;
+ }
+ .inputt input{
+    display: inline;
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    font-size: 15px;
+    padding-left: 20px;
+ }
+ .inputt input:focus{
+    outline: none;
+ }
+ .inputt input::placeholder {
+    font-size: 15px;
+ }
+.login .button{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: 500;
+    transition: 0.4s ease-in-out;
+    background-color: #0e2d4e;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+    font-family: 'Open Sans';
+ }
+ .login .button:hover {
+    opacity: 0.7;
+ }
+ .plus {
+    width: 13rem;
+    margin:3rem 0;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    background-color: #0e2d4e;
+    font-size: 1.4rem;
+    color: white;
+    box-shadow:  0 0 20px rgba(0,0,0,0.5);
+    font-family:'Open Sans';
+  }
+  .plus:hover{
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  @keyframes loading {
+    from{opacity: 1}
+    to{opacity: 0}
+  }
+  /* ===== Professional + Responsive add-on (paste at END) ===== */
+
+/* Better typography + prevent overflow on small screens */
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; }
+
+/* Make sections adapt better */
+.intro-section {
+  gap: 2rem;
+}
+
+/* Nav: keep it clean on small screens */
+nav .logo h4{
+  text-transform: capitalize;
+}
+
+/* Contact input container better spacing */
+nav .nav-items #contact{
+  gap: 8px;
+  align-items: center;
+}
+
+/* Video responsive (your HTML sets width/height inline; this helps on mobile) */
+video { max-width: 100%; height: auto; }
+
+/* Buttons: consistent */
+button, .plus, .login .button { transition: 0.2s ease; }
+
+/* ===== Mobile & Tablet ===== */
+@media (max-width: 1024px){
+  .intro-section{
+    padding: 0 2rem;
+  }
+  nav .nav-link{ font-size: 1.2rem; }
+}
+
+@media (max-width: 768px){
+  nav{
+    height: auto;
+    padding: 12px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  nav .logo{
+    font-size: 1.4rem;
+  }
+  nav .logo img{
+    width: 48px;
+    height: 48px;
+    padding-left: 0;
+  }
+
+  nav .nav-items{
+    width: 100%;
+    margin-right: 0;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  nav .nav-items .nav-item{
+    margin: 0;
+  }
+
+  /* Let contact block fit on mobile */
+  nav .nav-items input{
+    width: 180px;
+    max-width: 100%;
+  }
+
+  .intro{
+    margin-top: 90px; /* because nav becomes taller */
+  }
+
+  .intro-section{
+    height: auto;
+    padding: 0 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .intro-section .content .h1{
+    font-size: 2.6rem;
+  }
+
+  .intro-section .content #n_p{
+    font-size: 2rem;
+  }
+
+  .intro-section .content h2{
+    font-size: 1.3rem;
+  }
+
+  .intro-section p{
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .plus{
+    width: 100%;
+    max-width: 360px;
+    margin: 1.5rem 0;
+  }
+
+  /* Login box: full width on mobile */
+  .login{
+    width: min(92%, 420px);
+    right: 50%;
+    transform: translateX(50%);
+    top: 90px;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .inputt{
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 420px){
+  nav .nav-link{ font-size: 1.05rem; }
+  nav .nav-items input{ width: 150px; padding: 8px; }
+  nav .nav-items button{ padding: 8px; }
+}
+

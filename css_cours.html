@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="assets/css/style-4.css" rel="stylesheet"/>
+<link href="assets/img/CSS_Logo.png" rel="icon"/>
+<title>CSS_Cours</title>
+</head>
+<body>
+<nav>
+<div class="logo">
+<img alt="STI_Photo" src="assets/img/sti.png"/>
+<h4>développement web</h4>
+</div>
+<ul class="nav-items">
+<li class="nav-item"><a class="nav-link" href="accueil.html">Accueil</a></li>
+<li><div id="contact"><input id="contact-1" placeholder="écrire ton message" type="text"/><button onclick="envoyer()">Envoyer</button></div></li>
+<li class="nav-item"><a class="nav-link" onclick="contact()">Contact</a></li>
+<li><img alt="Cours_Logo" height="60" src="assets/img/cours.png" width="65"/></li>
+</ul>
+</nav>
+<div class="nav_cours">
+<h1>Les element de cours</h1>
+<ul>
+<li onclick="scrol('#a')">Sélecteurs</li>
+<li onclick="scrol('#b')">Propriétés de mise en forme du texte</li>
+<li onclick="scrol('#c')">Propriétés des listes</li>
+<li onclick="scrol('#d')">Propriétés de couleur et de fond</li>
+<li onclick="scrol('#e')">Propriétés des images</li>
+<li onclick="scrol('#f')">Propriétés des tableaux</li>
+<li onclick="scrol('#g')">Propriétés des boites</li>
+<li onclick="scrol('#k')">Propriétés des bordures</li>
+<li onclick="document.location.href='#m'">Transform</li>
+<li onclick="document.location.href='#n'">Transition</li>
+</ul>
+</div>
+<article>
+<div>
+<p class="h1"><img alt="CSS3_Logo" src="assets/img/CSS_Logo.png" style="width:6%; height: 6%;"/>CSS</p>
+<h3 style="font-size: 2.2rem; font-weight: bold;color: #0e2d4e; margin-bottom: 1.3%;">Introudction : </h3>
+<p style="font-family:sans-serif; font-size: 1.15rem;">Qu'est-ce que CSS ?
+                CSS signifie feuilles de style en cascade
+                CSS décrit comment les éléments HTML doivent être affichés à l'écran, sur papier ou sur d'autres supports
+                CSS économise beaucoup de travail. Il peut contrôler la mise en page de plusieurs pages Web à la fois
+                Les feuilles de style externes sont stockées dans des fichiers CSSQu'est-ce que CSS ?
+                CSS signifie feuilles de style en cascade
+                CSS décrit comment les éléments HTML doivent être affichés à l'écran, sur papier ou sur d'autres supports
+                CSS économise beaucoup de travail. Il peut contrôler la mise en page de plusieurs pages Web à la fois
+                Les feuilles de style externes sont stockées dans des fichiers CSS
+            </p>
+<video class="e" controls="" src="assets/video/css.mp4" style="width: 55%;height: 45%;margin-top: 2% ; margin-left: 23%;"></video>
+</div>
+<h2 class="a" id="a">Sélecteurs: <button class="btn" id="f1" onclick="exmple('code-runner','f1')" style="background-color:#264de4">Exemples ↓</button></h2>
+<p class="dd"><span class="a_1"> *:</span> Sélectionne tous les éléments.</p>
+<p class="dd"><span class="a_1">element1:</span> Sélectionne tous les éléments de type element.</p>
+<p class="dd"><span class="a_1">#id:</span> Cible un élément en fonction de la valeur de son attribut id.</p>
+<p class="dd"><span class="a_1">.class:</span> Cible les éléments en fonction de la valeur de leur attribut class.</p>
+<p class="dd"><span class="a_1">element.class:</span> Cible tous les éléments de type element en fonction de la valeur de leur attribut class.</p>
+<p class="dd"><span class="a_1">a:link:</span> Cible tous les liens non visités.</p>
+<p class="dd"><span class="a_1">a:visited:</span> Cible tous les liens visités.</p>
+<p class="dd"><span class="a_1">a:hover:</span> Cible l’élément au moment où l’utilisateur le survole avec le pointeur de la souris.</p>
+<p class="dd"><span class="a_1">a:active:</span> Cible tous les liens activés.</p>
+<div class="code-runner" id="code-runner" style="display: none;">
+<textarea class="code-input css_code" id="input-1"><!DOCTYPE html>
+
+                <html>
+                <head>
+                <style>
+                *{
+                        background-color: aqua;
+                    }
+                #a {
+                  text-align: center;}
+                .b{
+                    color: red;
+                }
+                </style>
+                </head>
+                <body>
+                
+                <h1 id="a">Hello World!</h1>
+                <h2 class="b">Smaller heading!</h2>
+                <p>This is a paragraph.</p>
+                </body></html></textarea>
+<button onclick="runCode('input-1','out_1')" style="background-color:#0e2d4e">Exécuter le code</button>
+<iframe class="output" id="out_1" src="iframe.html:blank" style="border: 2px solid #264de4;"></iframe>
+</div>
+<h2 class="a" id="b">Propriétés de mise en forme du texte: <button class="btn" id="f2" onclick="exmple('code-runner1','f2')" style="background-color:#264de4">Exemples ↓</button></h2>
+<p class="dd"><span class="a_1"> font-family :</span>Spécifie les noms de polices possibles par ordre de préférence.</p>
+<p class="dd"><span class="a_1">font-weight:</span> Spécifie la manière dont les caractères d’un texte doivent être affichés (bold ; bolder ; lighter).</p>
+<p class="dd"><span class="a_1">font-style :</span>Spécifie le style d'un texte (italic).</p>
+<p class="dd"><span class="a_1">font-size :</span>  Spécifie la taille d'une police.</p>
+<p class="dd"><span class="a_1">font : </span> Super-propriété de font. Combine font-family, font- weight, font-style, font-size.</p>
+<p class="dd"><span class="a_1">text-align : </span> Spécifie l'alignement horizontal d’un texte (left ; center ; right ; justify).</p>
+<p class="dd"><span class="a_1">text-shadow :</span>  Définit une ombre au texte.</p>
+<p class="dd"><span class="a_1">text- transform : </span> Spécifie la façon de transformer les caractères d’un texte en majuscules ou en minuscules (uppercase ; lowercase;capitalize).</p>
+<p class="dd"><span class="a_1">color :</span> Spécifie la couleur du texte.
+            </p>
+<div class="code-runner" id="code-runner1" style="display: none;">
+<textarea class="code-input css_code" id="input-2">
+                <html>
+                    <head>
+                    <style>
+                   h1,h2,p{
+                       font-family: sans-serif;
+                       font-weight: 500;
+                       font-size: x-large;
+                       font-style: italic;
+                       text-align:center;
+                       text-shadow :darkcyan;
+                       text-transform: capitalize;
+                       color: #0e2d4e;}
+                    </style>
+                    </head>
+                    <body>
+                    
+                    <h1>Hello World!</h1>
+                    <h2>Smaller heading!</h2>
+                    <p>This is a paragraph.</p>
+                    </body></html>
+            </textarea>
+<button onclick="runCode('input-2','out_2')" style="background-color:#0e2d4e">Exécuter le code</button>
+<iframe class="output" id="out_2" src="iframe.html:blank" style="border: 2px solid #264de4;"></iframe>
+</div>
+<h2 class="a" id="c">Propriétés des listes: <button class="btn" id="f3" onclick="exmple('code-runner2','f3')" style="background-color:#264de4">Exemples ↓</button></h2>
+<p class="dd"><span class="a_1"> list-style-type :</span>Définit le type de marqueur d’éléments de liste (circle; square ; upper-roman ; lower-alpha).</p>
+<p class="dd"><span class="a_1">list-style-position :</span> Spécifie la position des marqueurs d'éléments d’une liste à puces (outside ; inside).</p>
+<p class="dd"><span class="a_1">list-style-image :</span> Spécifie une image comme marqueur d'éléments de liste.</p>
+<p class="dd"><span class="a_1">list-style : </span> Super-propriété de liste. Combine list-style-type, list-style-position, list-style-image.</p>
+<div class="code-runner" id="code-runner2" style="display: none;">
+<textarea class="code-input css_code" id="input-3">  <html>
+                <head>
+                <style>
+               h1,h2,p{
+             list-style-type:decimal ;
+             list-style-position: inside;
+             list-style: circle;}
+                </style>
+                </head>
+                <body>
+                
+                <h1>Hello World!</h1>
+                <h2>Smaller heading!</h2>
+                <p>This is a paragraph.</p>
+                </body></html></textarea>
+<button onclick="runCode('input-3','out_3')" style="background-color:#0e2d4e">Exécuter le code</button>
+<iframe class="output" id="out_3" src="iframe.html:blank" style="border: 2px solid #264de4;"></iframe>
+</div>
+<h2 class="a" id="d">Propriétés de couleur et de fond: <button class="btn" id="f4" onclick="exmple('code-runner3','f4')" style="background-color:#264de4">Exemples ↓</button></h2>
+<p class="dd"><span class="a_1"> background-color :</span> Définit la couleur d'arrière-plan d'un élément.</p>
+<p class="dd"><span class="a_1">background-image :</span> Définit une image d'arrière-plan pour un élément.</p>
+<p class="dd"><span class="a_1">background-repeat :</span>Définit la façon dont une image d’arrière-plan est répétée (repeat ; repeat-x ; repeat-y).</p>
+<p class="dd"><span class="a_1">background-size :</span>  Spécifie la taille d’une image d'arrière-plan.</p>
+<p class="dd"><span class="a_1">background :  </span> Super-propriété d’arrière-plan. Combine background-color, background-image, background-repeat background-size.</p>
+<div class="code-runner" id="code-runner3" style="display: none;">
+<textarea class="code-input css_code" id="input-4">  <html>
+                <head>
+                <style>
+               h1,h2,p{
+                   background-color: blanchedalmond;
+                   background-size: contain;}
+                </style>
+                </head>
+                <body>
+                
+                <h1>Hello World!</h1>
+                <h2>Smaller heading!</h2>
+                <p>This is a paragraph.</p>
+                </body></html></textarea>
+<button onclick="runCode('input-4','out_4')" style="background-color:#0e2d4e">Exécuter le code</button>
+<iframe class="output" id="out_4" src="iframe.html:blank" style="border: 2px solid #264de4;"></iframe>
+</div>
+<h2 class="a" id="e">Propriétés des images : <button class="btn" id="f5" onclick="exmple('code-runner4','f5')" style="background-color:#264de4">Exemples ↓</button></h2>
+<p class="dd"><span class="a_1"> filter :</span> Définit des filtres sur un élément (blur() ; grayscale() ; invert()).</p>
+<div class="code-runner" id="code-runner4" style="display: none;">
+<textarea class="code-input css_code" id="input-5">  <html>
+                <head>
+                <style>
+               img{
+                 filter: blur(5px);}
+                </style>
+                </head>
+                <body>
+                
+                <img alt="Logo STI" height="100%" src="assets/img/sti.png" width="100%"/>
+                </body></html></textarea>
+<button onclick="runCode('input-5','out_5')" style="background-color:#0e2d4e">Exécuter le code</button>
+<iframe class="output" id="out_5" src="iframe.html:blank" style="border: 2px solid #264de4;"></iframe>
+</div>
+<h2 class="a" id="f">Propriétés des tableaux : <button class="btn" id="f6" onclick="exmple('code-runner5','f6')" style="background-color:#264de4">Exemples ↓</button></h2>
+<p class="dd"><span class="a_1"> table-layout :</span> Définit la façon de disposer les cellules, lignes et colonnes d’un tableau.</p>
+<p class="dd"><span class="a_1"> border-collapse : </span> Définit si les bordures des cellules sont fusionnées ou séparées (separate ; collapse).</p>
+<div class="code-runner" id="code-runner5" style="display: none;">
+<textarea class="code-input css_code" id="input-6">  <html>
+                <head>
+                <style>
+               *{
+                  table-layout: inherit;
+                border-collapse: separate;}
+                </style>
+                </head>
+                <body>
+                
+                <h1>Hello World!</h1>
+                <h2>Smaller heading!</h2>
+                <p>This is a paragraph.</p>
+                </body></html></textarea>
+<button onclick="runCode('input-6','out_6')" style="background-color:#0e2d4e">Exécuter le code</button>
+<iframe class="output" id="out_6" src="iframe.html:blank" style="border: 2px solid #264de4;"></iframe>
+</div>
+<h2 class="a" id="g">Propriétés des boîtes: <button class="btn" id="f7" onclick="exmple('code-runner6','f7')" style="background-color:#264de4">Exemples ↓</button></h2>
+<p class="dd"><span class="a_1"> width :</span> Définit la largeur d'un élément.</p>
+<p class="dd"><span class="a_1">height :</span>  Définit la hauteur d'un élément.</p>
+<p class="dd"><span class="a_1">position : </span> Spécifie le type de la méthode de positionnement utilisée pour un élément (absolute ; fixed ; relative ; static ; sticky).</p>
+<p class="dd"><span class="a_1">padding :</span> Propriété abrégée qui définit la marge intérieur d’un élément des 4 cotés.</p>
+<p class="dd"><span class="a_1">margin :</span> Définit les marges d'un élément.</p>
+<p class="dd"><span class="a_1">box-shadow :</span> Ajoute des ombres à la boîte d’un élément.</p>
+<p class="dd"><span class="a_1">display : </span> Spécifie le comportement d'affichage d'un élément (inline ; block ; inline-block).</p>
+<p class="dd"><span class="a_1">top :</span> Spécifie la position verticale, par rapport au haut, d'un élément positionné.</p>
+<p class="dd"><span class="a_1">bottom : </span> Spécifie la position verticale, par rapport au bas, d'un élément positionné.</p>
+<p class="dd"><span class="a_1">left :</span> Spécifie la position horizontale, par rapport à la gauche, d'un élément positionné.</p>
+<p class="dd"><span class="a_1">right :  </span> Spécifie la position horizontale, par rapport à la droite, d'un élément positionné.</p>
+<p class="dd"><span class="a_1">overflow :</span> Spécifie le comportement du contenu lorsque il déborde de la boîte d'un élément (visible ; hidden ; clip ; scroll ; auto).</p>
+<p class="dd"><span class="a_1">opacity :  </span> Définit le niveau de transparence.</p>
+<div class="code-runner" id="code-runner6" style="display: none;">
+<textarea class="code-input css_code" id="input-7">  <html>
+                <head>
+                <style>
+               h1,h2,p{
+                 width: 80%;
+                height: 80%;
+                position: static;
+                margin: 0 auto;
+                display:block}
+                </style>
+                </head>
+                <body>
+                
+                <h1>Hello World!</h1>
+                <h2>Smaller heading!</h2>
+                <p>This is a paragraph.</p>
+                </body></html></textarea>
+<button onclick="runCode('input-7','out_7')" style="background-color:#0e2d4e">Exécuter le code</button>
+<iframe class="output" id="out_7" src="iframe.html:blank" style="border: 2px solid #264de4;"></iframe>
+</div>
+<h2 class="a" id="k">Propriétés des bordures : <button class="btn" id="f8" onclick="exmple('code-runner7','f8')" style="background-color:#264de4">Exemples ↓</button></h2>
+<p class="dd"><span class="a_1"> border-color :</span>Définit la couleur des bordures d'un élément.</p>
+<p class="dd"><span class="a_1">border-style:</span> Définit le style des bordures d'un élément.</p>
+<p class="dd"><span class="a_1">border-radius :</span> Définit le rayon des coins arrondis d’un élément.</p>
+<p class="dd"><span class="a_1">border-width : </span> Définit la largeur des bordures d'un élément (medium ; thin ; thick ; valeur en px).</p>
+<div class="code-runner" id="code-runner7" style="display: none;">
+<textarea class="code-input css_code" id="input-8">  <html>
+                <head>
+                <style>
+               h1,h2,p{
+                  border-color: brown;
+                border-style: dashed;
+                border-radius: 5%;
+                border-width: 5%;}
+                </style>
+                </head>
+                <body>
+                
+                <h1>Hello World!</h1>
+                <h2>Smaller heading!</h2>
+                <p>This is a paragraph.</p>
+                </body></html></textarea>
+<button onclick="runCode('input-8','out_8')" style="background-color:#0e2d4e">Exécuter le code</button>
+<iframe class="output" id="out_8" src="iframe.html:blank" style="border: 2px solid #264de4;"></iframe>
+</div>
+<h2 class="a" id="m">Transform : <button class="btn" id="f9" onclick="exmple('code-runner8','f9')" style="background-color:#264de4">Exemples ↓</button></h2>
+<p class="dd"><span class="a_1"> Transformation :</span> Applique un effet de transformation 2D ou 3D à un élément (rotate(), skew(), scale(), translate()).</p>
+<div class="code-runner" id="code-runner8" style="display: none;">
+<textarea class="code-input css_code" id="input-9">  <html>
+                <head>
+                <style>
+               h1,h2,p{
+                   transform:scale(0.6)}
+                </style>
+                </head>
+                <body>
+                
+                <h1>Hello World!</h1>
+                <h2>Smaller heading!</h2>
+                <p>This is a paragraph.</p>
+                </body></html></textarea>
+<button onclick="runCode('input-9','out_9')" style="background-color:#0e2d4e">Exécuter le code</button>
+<iframe class="output" id="out_9" src="iframe.html:blank" style="border: 2px solid #264de4;"></iframe>
+</div>
+<h2 class="a" id="n">Transition : <button class="btn" id="f10" onclick="exmple('code-runner9','f10')" style="background-color:#264de4">Exemples ↓</button></h2>
+<p class="dd"><span class="a_1"> transition-delay :</span>Spécifie le délai nécessaire avant que la transition commence.</p>
+<p class="dd"><span class="a_1">transition-duration : </span> Spécifie la durée de la transition.</p>
+<p class="dd"><span class="a_1">transition-property :</span> Spécifie les propriétés CSS sur lesquelles l'effet de transition sera appliqué.</p>
+<p class="dd"><span class="a_1">transition : </span> Super-propriété de transition. Combine transition-property, transition-duration et transition-delay.
+            </p>
+<div class="code-runner" id="code-runner9" style="display: none;">
+<textarea class="code-input css_code" id="input-10">  <html>
+                <head>
+                <style>
+               img{
+                   filter: blur(5px);
+                   transition: 0.1s ease-in-out
+
+            }
+                </style>
+                </head>
+                <body>
+                
+                <img alt="Logo STI" height="100%" src="assets/img/sti.png" width="100%"/>
+                </body></html></textarea>
+<button onclick="runCode('input-10','out_10')" style="background-color:#0e2d4e">Exécuter le code</button>
+<iframe class="output" id="out_10" src="iframe.html:blank" style="border: 2px solid #264de4;"></iframe>
+</div>
+<div style="text-align: right;">
+<button class="last_btn_1" onclick="document.location='css_quiz.html'" style="background-color:#264de4">Accéder au Quiz</button>
+</div>
+</article>
+<script defer="" src="assets/js/script_1.js"></script>
+</body>
+</html>
